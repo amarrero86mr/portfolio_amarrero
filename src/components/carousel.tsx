@@ -22,7 +22,6 @@ export const Carousel = ( props: {data: Array<TSlideProyect>} ) => {
         spaceBetween={30}
         loop={true}
         autoplay={{
-          delay: 2500,
           disableOnInteraction: false,
         }}
         navigation={true}
