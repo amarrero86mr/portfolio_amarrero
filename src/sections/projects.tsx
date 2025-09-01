@@ -4,8 +4,8 @@ export const Projects = () => {
     
     return (
         <>
-            <div className='h-16 my-2'></div>
-            <h2>Projects</h2>
+            <div className='my-2 mb-2'></div>
+            <h2>PROJECTs</h2>
             <Carousel data={slidesData}></Carousel>
             
         </>

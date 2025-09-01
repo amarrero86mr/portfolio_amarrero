@@ -14,7 +14,7 @@ export const ContactForm = () => {
   const [isSending, setIsSending] = useState(false);
 
   const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY as string;
-
+  
   useEffect(() => {
     emailjs.init({
       publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string,
@@ -108,12 +108,14 @@ export const ContactForm = () => {
           tabIndex={-1}
           autoComplete="off"
         />
-
+        
         <ReCAPTCHA
-          ref={captchaRef}
-          sitekey={RECAPTCHA_SITE_KEY}
-          onChange={(token) => setCaptchaToken(token)}
+        
+        ref={captchaRef}
+        sitekey={RECAPTCHA_SITE_KEY}
+        onChange={(token) => setCaptchaToken(token)}
         />
+        
 
         <button
           className="btnContact"
