@@ -5,8 +5,7 @@ import { SkillContext, type TSkillContext } from "../components/skills.contexty"
 
 export const Skills = () => {
     const { changeTheme } = useContext<TDarkLightContext>(DarkLightContext)
-    const { skillSelected, onOffSkills } = useContext<TSkillContext>(SkillContext)
-    console.log(skillSelected)
+    const { onOffSkills } = useContext<TSkillContext>(SkillContext)
 
     const fnstyles =(id:string)=>{
         onOffSkills(id);
