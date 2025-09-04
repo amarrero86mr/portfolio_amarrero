@@ -29,7 +29,7 @@ export const CarouselCertificates = ( props: {data: Array<TSlideProyect>} ) => {
         spaceBetween={30}
         loop={true}
         autoplay={{
-          delay: 2500,
+          delay: 4000,
           disableOnInteraction: false,
         }}
         navigation={true}

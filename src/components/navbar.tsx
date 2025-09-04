@@ -46,8 +46,8 @@ export const Navbar = () => {
               <Link to="certificates" spy={true} smooth={true} duration={500}>CERTIFICATEs</Link> </li>
             <li className={`nav-item p-1 ` + changeTheme}>
               <Link to="contact" spy={true} smooth={true} duration={500}>CONTACT {skillSelected.length > 0
-                ? <span className="bg-rose-500 z-30 text-rose-50 rounded-full text-xs h-4 w-4 m-1 absolute right-8 top-7 text-center "
-                >{skillSelected.length}<span className="bg-rose-500 z-20 rounded-full h-4 w-4 m-1 fixed top-7 right-8 animate-ping">{skillSelected.length}</span></span>
+                ? <span className="bg-rose-500 z-30 text-rose-50 rounded-full text-xs h-4 w-4 m-1 absolute top-3 right-1 text-center "
+                >{skillSelected.length}<span className="bg-rose-500 z-20 rounded-full h-4 w-4 m-1 fixed top-3 right-1 animate-ping">{skillSelected.length}</span></span>
                 : null} </Link> </li>
           </ul>
         </div>
