@@ -1,27 +1,125 @@
-html{
-    background-color: #2F0D68;
-    z-index: -10;
-}
-.contain_main{
-    
-    position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-    background: url('/src/assets/imgs/night_background_image.png') center center / cover;
-    
-     background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-    
-    opacity: 0.7;
-    z-index: -5;
-    pointer-events: none;
+@import "tailwindcss";
+
+.avatar{
+  width: 16rem;
+  height: auto;
+  border: 3px solid;
+  border-radius: 50%;
 }
 
-.contain{
-    
-    z-index: 1;
+.avatar .lightTheme {
+  border: 3px solid #7008E7;
+}
+
+.avatar .darkTheme {
+  border: 3px solid  #83CD29;
+}
+
+.nav-item:hover{
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-item.darkTheme:hover{
+  text-shadow:
+  0 0 1.5em #dab2ff,
+  0 0 0.5em #A684FF;
+  color: #83CD29;
+}
+
+.nav-item.lightTheme:hover{
+  text-shadow:
+  0 0 2.5em #f0fdd8,
+  0 0 0.5em #D8F999;
+  color: #7008E7;
+}
+
+.nav-icon:hover{
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.nav-icon.darkTheme:hover{
+  background-color: 
+  hsla(257, 100%, 76%, 0.557);
+  box-shadow:
+  0 0 7px 5px #a784ff8e;
+}
+
+.nav-icon.lightTheme:hover{
+  background-color: 
+  #d7f999ab;
+  box-shadow:
+  0 0 7px 4px #e3f7bfb3;
+}
+
+.visible{
+ visibility: visible;
+}
+
+.novisible{
+  visibility: hidden;
+}
+
+.skillBox>div>svg{
+  cursor: pointer;
+}
+
+.darkTheme>div>.skillSelect{
+  background-color: 
+  #a784ffaa;
+  box-shadow:
+  0 0 7px 12px #A684FFAA;
+  border-radius: 20%;
+}
+
+.lightTheme>div>.skillSelect{
+  background-color: 
+  #bbf451AA;
+  box-shadow:
+  0 0 7px 12px #bbf451AA;
+  border-radius: 20%;
+}
+
+.velo-certificate{
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: all 0.5s;
+  z-index: 5;
+}
+
+.velo-certificate.darkTheme{
+  background-color: #2e0d6822;
+}
+
+.velo-certificate.lightTheme{
+  background-color:  #83cd2922;
+}
+.modal-certificate{
+  border-radius: 1.5rem;
+  border: solid 2px currentColor;
+  position:fixed;
+  left: auto;
+  margin: auto 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  transition: all 0.5s;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+.modal-certificate.darkTheme{
+  background-color: #2e0d68;
+  background-image: linear-gradient(90deg, #5619ab, #440d68);
+}
+
+.modal-certificate.lightTheme{
+  
+  background-image: linear-gradient(90deg, #D8F999, #7CCF00 60%);
 }
