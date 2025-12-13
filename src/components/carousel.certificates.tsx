@@ -10,14 +10,14 @@ import { ModalCertificate } from './modal.certificates';
 // import 'swiper/css/navigation';
 // import 'swiper/css/pagination';
 
-export const CarouselCertificates = ( props: {data: Array<TSlideProyect>} ) => {
-    const { changeTheme } = useContext<TDarkLightContext>(DarkLightContext)
-    const [ onoffModal, setOnoffModal ] = useState<boolean>(false);
-    const [ dataModal, setDataModal ] = useState<TSlideProyect>()
-    
-    const fnOnModalCert = () => {
-      setOnoffModal(!onoffModal)
-    }
+export const CarouselCertificates = (props: { data: Array<TSlideProyect> }) => {
+  const { changeTheme } = useContext<TDarkLightContext>(DarkLightContext)
+  const [onoffModal, setOnoffModal] = useState<boolean>(false);
+  const [dataModal, setDataModal] = useState<TSlideProyect>()
+
+  const fnOnModalCert = () => {
+    setOnoffModal(!onoffModal)
+  }
 
   return (
     <div className="w-full h-96 my-8">
@@ -34,22 +34,28 @@ export const CarouselCertificates = ( props: {data: Array<TSlideProyect>} ) => {
         }}
         navigation={true}
         pagination={{ clickable: true }}
-        
+
         className={`mySwiper w-full h-full ${changeTheme}`} >
         {props.data.map((slide) => (
-          <SwiperSlide key={slide.id} onClick={()=>{setDataModal(slide), fnOnModalCert()}}>
+          <SwiperSlide key={slide.id} >
             <div className="flex flex-col items-center justify-center p-8 rounded-lg shadow-md h-full cursor-pointer" >
               {slide.title.trim() !== '' ? <h3 className="text-2xl mb-4">{slide.title}</h3> : null}
               {slide.description.trim() !== '' ? <p className="text-lg text-center mb-4">{slide.description}</p> : null}
-              {slide.image.trim() !== '' ? <img src={slide.image} alt={slide.title} className="max-w-xs md:max-w-sm rounded-lg shadow-sm border-2" /> : null}
+              {slide.image.trim() !== '' ?
+                <img
+                  onClick={()=>{setDataModal(slide), fnOnModalCert()}}
+                  src={slide.image}
+                  alt={slide.title}
+                  className="max-w-xs md:max-w-sm rounded-lg shadow-sm border-2" />
+                : null}
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
-        {onoffModal 
+      {onoffModal
         ? <ModalCertificate fnOnModalCert={fnOnModalCert} data={dataModal!}></ModalCertificate>
         : null
-        }
+      }
     </div>
   );
 };
