@@ -15,7 +15,7 @@ export const Carousel = (props: { data: Array<TSlideProyect> }) => {
   const [onoffModal, setOnoffModal] = useState<boolean>(false);
   const [dataModal, setDataModal] = useState<TSlideProyect>()
 
-  const fnOnModalCert = () => {
+  const fnOnModalProyect = () => {
     setOnoffModal(!onoffModal)
   }
 
@@ -39,7 +39,7 @@ export const Carousel = (props: { data: Array<TSlideProyect> }) => {
         {props.data.map((slide) => (
           <SwiperSlide key={slide.id} className='mb-4'>
             <div
-              onClick={()=>{setDataModal(slide), fnOnModalCert()}}
+              onClick={()=>{setDataModal(slide), fnOnModalProyect()}}
               className="m-auto mb-6 flex items-center justify-center gap-6 p-2 rounded-lg shadow-md border-2 border-current max-w-9/12 h-80">
               {slide.image.trim() !== '' ? <img src={slide.image} alt={slide.title} className="max-w-6/12 m-auto rounded-lg shadow-sm border-2" /> : null}
               <div className='flex flex-col self-start my-4 gap-4'>
@@ -52,7 +52,7 @@ export const Carousel = (props: { data: Array<TSlideProyect> }) => {
         ))}
       </Swiper>
       {onoffModal
-              ? <ModalProyect fnOnModalProyect={fnOnModalCert} data={dataModal!}></ModalProyect>
+              ? <ModalProyect fnOnModalProyect={fnOnModalProyect} data={dataModal!}></ModalProyect>
               : null
             }
     </div>
