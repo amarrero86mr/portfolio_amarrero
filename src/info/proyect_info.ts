@@ -39,7 +39,7 @@ export const slidesData: TSlideProyect[] = [
     linkweb: "",
   },
   {
-    id: 3,
+    id: 4,
     title: 'Proyecto: Tiendita API',
     description: 'Aplicación back-end de E-commerce, con: Node.js, Express, TypeScript, MySQL, JWT y Swagger UI',
     image: imag4,

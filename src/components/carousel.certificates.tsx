@@ -4,16 +4,17 @@ import { type TSlideProyect } from "../info/proyect_info"
 import { useContext, useState } from 'react';
 import { DarkLightContext, type TDarkLightContext } from './darklight.context';
 import { ModalCertificate } from './modal.certificates';
+import type { TSlidecertificates } from '../info/certificate_info';
 
 // eslint-disable-next-line no-alert
 // import "swiper/css"; 
 // import 'swiper/css/navigation';
 // import 'swiper/css/pagination';
 
-export const CarouselCertificates = (props: { data: Array<TSlideProyect> }) => {
+export const CarouselCertificates = (props: { data: Array<TSlidecertificates> }) => {
   const { changeTheme } = useContext<TDarkLightContext>(DarkLightContext)
   const [onoffModal, setOnoffModal] = useState<boolean>(false);
-  const [dataModal, setDataModal] = useState<TSlideProyect>()
+  const [dataModal, setDataModal] = useState<TSlidecertificates>()
 
   const fnOnModalCert = () => {
     setOnoffModal(!onoffModal)

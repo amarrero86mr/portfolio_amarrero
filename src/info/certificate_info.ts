@@ -1,10 +1,15 @@
-import type { TSlideProyect } from "./proyect_info";
-
 import imag1 from "../info/certificado_CAC_2024.jpg"
 import imag2 from "../info/pytho_santander_1.jpg"
 import imag3 from "../info/talento_tech_2025.jpg"
 
-export const certificateData: TSlideProyect[] = [
+export type TSlidecertificates = {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+}
+
+export const certificateData: TSlidecertificates[] = [
   {
     id: 1,
     title: 'Codo A Codo - Full Stak - 2024',

@@ -1,12 +1,12 @@
 import { useContext } from "react"
-import type { TSlideProyect } from "../info/proyect_info"
 import { DarkLightContext, type TDarkLightContext } from "./darklight.context"
+import type { TSlidecertificates } from "../info/certificate_info"
 
 
 export const ModalCertificate = (
     props: {
         fnOnModalCert: () => void,
-        data: TSlideProyect
+        data: TSlidecertificates
     }) => {
 
     const { changeTheme } = useContext<TDarkLightContext>(DarkLightContext)

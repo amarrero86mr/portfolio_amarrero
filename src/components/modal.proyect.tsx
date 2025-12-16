@@ -34,11 +34,11 @@ export const ModalProyect = (
                             {props.data.description}
                         </p>
                         {props.data.linkweb !== null ?
-                        <a className="text-lg content-center row-start-4 row-span-1" href={props.data.linkweb}>{props.data.linkweb}</a>
+                        <a target="_blank" className="text-lg content-center row-start-4 row-span-1" href={props.data.linkweb}>{props.data.linkweb}</a>
                         : null
                         }
                         {props.data.linkgit !== null ?
-                        <a className="text-lg content-center row-start-5 row-span-1" href={props.data.linkgit}>{props.data.linkgit}</a>
+                        <a target="_blank" className="text-lg content-center row-start-5 row-span-1" href={props.data.linkgit}>{props.data.linkgit}</a>
                         : null }
                     </div>
 
