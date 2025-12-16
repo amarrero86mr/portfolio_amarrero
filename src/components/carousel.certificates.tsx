@@ -1,15 +1,10 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay } from 'swiper/modules';
-import { type TSlideProyect } from "../info/proyect_info"
 import { useContext, useState } from 'react';
 import { DarkLightContext, type TDarkLightContext } from './darklight.context';
 import { ModalCertificate } from './modal.certificates';
 import type { TSlidecertificates } from '../info/certificate_info';
 
-// eslint-disable-next-line no-alert
-// import "swiper/css"; 
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
 
 export const CarouselCertificates = (props: { data: Array<TSlidecertificates> }) => {
   const { changeTheme } = useContext<TDarkLightContext>(DarkLightContext)
@@ -23,9 +18,7 @@ export const CarouselCertificates = (props: { data: Array<TSlidecertificates> })
   return (
     <div className="w-full h-96 my-8">
       <Swiper
-        // Añadimos los módulos que queremos usar
         modules={[Autoplay, Navigation, Pagination, Mousewheel, Keyboard]}
-        // Configuramos el comportamiento del carrusel
         slidesPerView={1}
         spaceBetween={30}
         loop={true}

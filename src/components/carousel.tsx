@@ -5,11 +5,6 @@ import { useContext, useState } from 'react';
 import { DarkLightContext, type TDarkLightContext } from './darklight.context';
 import { ModalProyect } from './modal.proyect';
 
-// eslint-disable-next-line no-alert
-// import "swiper/css"; 
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
-
 export const Carousel = (props: { data: Array<TSlideProyect> }) => {
   const { changeTheme } = useContext<TDarkLightContext>(DarkLightContext);
   const [onoffModal, setOnoffModal] = useState<boolean>(false);
@@ -22,9 +17,7 @@ export const Carousel = (props: { data: Array<TSlideProyect> }) => {
   return (
     <div className="w-full h-11/12 my-8 p-2">
       <Swiper
-        // Añadimos los módulos que queremos usar
         modules={[Autoplay, Navigation, Pagination, Mousewheel, Keyboard]}
-        // Configuramos el comportamiento del carrusel
         slidesPerView={1}
         spaceBetween={30}
         loop={true}

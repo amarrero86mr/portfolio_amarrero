@@ -14,14 +14,8 @@ export const Contact = () => {
       <div>
         <h2>CONTACTs</h2>
       </div>
-      <div
-        className={`my-8 skillBox ${changeTheme}`}
-      // style={changeTheme == 'lightTheme' ? { color: '#4D179A' } : { color: '#83CD29' }}
-      >
-        
-          <ContactForm />
-        
-        
+      <div className={`my-8 skillBox ${changeTheme}`}>
+          <ContactForm />    
       </div>
     </div>
   );

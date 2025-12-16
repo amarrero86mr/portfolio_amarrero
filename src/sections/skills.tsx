@@ -23,10 +23,7 @@ export const Skills = () => {
                 <h2>SKILLs</h2>
                 <p>_selecciona las skills que buscas</p>
             </div>
-            <div
-                className={`my-8 skillBox ${changeTheme}`}
-            // style={changeTheme == 'lightTheme' ? { color: '#4D179A' } : { color: '#83CD29' }}
-            >
+            <div className={`my-8 skillBox ${changeTheme}`}>
                 <div className="flex gap-15 my-15 justify-around flex-wrap">
                     <svg onClick={(e) => { fnstyles(e.currentTarget.id) }} className={``} id="html" width={60} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><title>Html 5</title><path fill="currentColor" d="M128 96L162.9 491.8L319.5 544L477.1 491.8L512 96L128 96zM436.2 223.9L252.4 223.9L256.5 273.3L432.1 273.3L418.5 421.7L320.6 448.7L320.6 449L319.5 449L220.8 421.7L214.8 345.9L262.5 345.9L266 384L319.5 398.5L373.2 384L379.2 321.8L212.3 321.8L199.5 176.2L440.6 176.2L436.2 223.9z" /></svg>
                     {/* <img src="src\assets\icons\html_icon.svg" alt="logo de html" width={'60px'} /> */}
