@@ -28,7 +28,6 @@ function App() {
     <div className={`backgound ` + changeBackground}>
       <div className={`contain_main ` + changeBackground}></div>
       <div className={`contain ` + changeTheme}>
-        {/* <Navbar handleTheme={onDark}/> */}
         <Navbar />
         <main>
           <Element name="hero">
