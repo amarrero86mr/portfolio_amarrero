@@ -6,6 +6,7 @@ export type TSlideProyect = {
   image: string;
   linkgit: string;
   linkweb: string;
+  status: string;
 }
 
 import imag1 from "../info/task_management_baner.jpg"
@@ -21,22 +22,25 @@ export const slidesData: TSlideProyect[] = [
     image: imag1,
     linkgit: "",
     linkweb: "",
+    status: "En Desarrollo",
   },
   {
     id: 2,
     title: 'Proyecto: Tradicion Ciolla',
     description: 'Aplicación front-end & back-end de E-commerce, con: js, node.js, express, MySQL, css, html',
     image: imag2,
-    linkgit: "",
+    linkgit: "https://github.com/amarrero86mr/tpGrupo2-comision24258.git",
     linkweb: "",
+    status: "En Desarrollo - deployed",
   },
   {
     id: 3,
     title: 'Proyecto: Wl`r Shopeer',
     description: 'Aplicación front-end de E-commerce, con: React.js, react-router, mockAPI, Bootstrap',
     image: imag3,
-    linkgit: "",
+    linkgit: "https://github.com/amarrero86mr/talento_tech_e-commerce.git",
     linkweb: "",
+    status: "En Desarrollo - deployed",
   },
   {
     id: 4,
@@ -45,5 +49,6 @@ export const slidesData: TSlideProyect[] = [
     image: imag4,
     linkgit: "https://github.com/amarrero86mr/tiendita-backend.git",
     linkweb: "https://tiendita-backend-snowy.vercel.app/",
+    status: "En Desarrollo - deployed",
   },
 ];

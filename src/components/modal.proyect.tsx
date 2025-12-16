@@ -30,8 +30,11 @@ export const ModalProyect = (
                 <div className="grid grid-cols-6 gap-1 m-auto">
                     <img src={props.data.image} alt={props.data.title} className="max-h-10/12 m-auto rounded-lg shadow-sm border-2  col-span-3" />
                     <div className="col-span-3 gap-1 grid grid-rows-6">
-                        <p className="text-lg content-center row-span-3 row-start-1">
+                        <p className="text-lg content-center row-span-2 row-start-1">
                             {props.data.description}
+                        </p>
+                        <p className="text-lg content-center row-start-3 row-span-1">
+                            {props.data.status}
                         </p>
                         {props.data.linkweb !== null ?
                         <a target="_blank" className="text-lg content-center row-start-4 row-span-1" href={props.data.linkweb}>{props.data.linkweb}</a>

@@ -45,6 +45,7 @@ export const Carousel = (props: { data: Array<TSlideProyect> }) => {
               <div className='flex flex-col self-start my-4 gap-4'>
                 {slide.title.trim() !== '' ? <h3 className="text-2xl text-center mt-0">{slide.title}</h3> : null}
                 {slide.description.trim() !== '' ? <p className="text-lg content-center mt-4">{slide.description}</p> : null}
+                {slide.status.trim() !== '' ? <p className="text-lg content-center mt-4">{slide.status}</p> : null}
 
               </div>
             </div>
