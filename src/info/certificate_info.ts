@@ -1,6 +1,7 @@
 import imag1 from "../info/certificado_CAC_2024.jpg"
 import imag2 from "../info/pytho_santander_1.jpg"
 import imag3 from "../info/talento_tech_2025.jpg"
+import imag4 from "../info/back-talentotech.jpg"
 
 export type TSlidecertificates = {
   id: number;
@@ -27,5 +28,11 @@ export const certificateData: TSlidecertificates[] = [
     title: 'Talento Tech - Fron-end React.js - 2025',
     description: '',
     image: imag3
+  },
+  {
+    id: 4,
+    title: 'Talento Tech - back-end Node.js - 2025',
+    description: '',
+    image: imag4
   },
 ];
